@@ -37,7 +37,6 @@ public class Solution {
         for (int i = 0; i < array.length; i++) {
             for (int i1 = 0; i1 < array[i].length; i1++) {
 
-
                 if (array[i][i1].equals(value)) {
 
                     System.out.println(array[i][0] + " " + array[i][1] + " " + array[i][2]);
