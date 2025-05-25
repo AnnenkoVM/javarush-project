@@ -22,9 +22,7 @@ public class Solution {
 
         //System.out.println("Ввод:");
         Scanner sc = new Scanner(System.in);
-
         String data = sc.nextLine();
-
         studentFinder(data);
 
       //System.out.println(array[2][1]);
