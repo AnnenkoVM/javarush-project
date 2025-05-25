@@ -3,7 +3,9 @@ package com.javarush.task.jdk13.task53.task5307;
 public class CaesarCipher {
 
     // Алфавит
-    private static final String ALPHABET = "тут будет наш алфавит";
+    private static final char[] ALPHABET = {'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з',
+            'и','к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
+            'ъ', 'ы', 'ь', 'э', 'я', '.', ',', '«', '»', '"', '\'', ':', '!', '?', ' '};
 
     // Методы для шифрования, расшифровки, brute force, статистического анализа
 
@@ -29,6 +31,10 @@ public class CaesarCipher {
 
     public static void main(String[] args) {
         CaesarCipher cipher = new CaesarCipher();
+
+
+
+
         // Логика меню
         // 1. Шифрование
         // 2. Расшифровка с ключом
