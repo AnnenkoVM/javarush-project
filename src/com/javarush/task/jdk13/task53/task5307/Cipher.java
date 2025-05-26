@@ -5,7 +5,13 @@ import javax.crypto.spec.PSource;
 public class Cipher {
 
 
-    private static char[] alphabet;
+    //private static char[] alphabet;
+
+
+    private static char[] alphabet = {'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з',
+            'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
+            'ъ', 'ы', 'ь', 'э', 'я', '.', ',', '«', '»', '"', '\'', ':', '!', '?', ' ','\r', '\n'};
+
 
 
     public Cipher(char[] alphabet) {
@@ -29,7 +35,7 @@ public class Cipher {
                     if (i1 + shift < alphabet.length) {    // если со смещением не вышли за рамки массива
                         newArray[indexGen] = alphabet[i1 + shift];
                         indexGen++;
-                    } else  {
+                    }  else  {
                         int destinationIndex = (i1 + shift) % alphabet.length; // задаем индекс равный числу которое превысило массив
                         newArray[indexGen] = alphabet[destinationIndex];
                         indexGen++;
@@ -41,7 +47,7 @@ public class Cipher {
     }
 
 
-    public String decrypt(String text, int shift) {
+    public static String decrypt(String text, int shift) {
         char[] textArray = text.toCharArray();
 
         int newArraySize = text.length();
@@ -66,6 +72,5 @@ public class Cipher {
             }
         }
         return new String(newArray);
-
     }
 }
